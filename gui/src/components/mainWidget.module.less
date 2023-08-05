@@ -1,0 +1,49 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+
+  .table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+
+    >div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      align-items: stretch;
+      justify-content: stretch;
+    }
+
+
+
+    .cell {
+      font-weight: 600;
+      width: initial;
+      min-width: 41px;
+
+      &.computed {
+        background-color: rgba(0, 69, 165, 0.3);
+      }
+    }
+  }
+
+  .manager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+
+.picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}

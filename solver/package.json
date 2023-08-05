@@ -1,0 +1,16 @@
+{
+    "name": "sudoku",
+    "collaborators": [
+        "BOPOHOB <self@bopohob.ru>"
+    ],
+    "version": "0.1.2",
+    "files": [
+        "sudoku.wasm",
+        "sudoku.js",
+        "sudoku.module.js",
+        "sudoku.d.ts"
+    ],
+    "module": "sudoku.module.js",
+    "types": "sudoku.d.ts",
+    "sideEffects": false
+}
