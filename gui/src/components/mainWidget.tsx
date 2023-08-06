@@ -11,9 +11,9 @@ import cn from './mainWidget.module.less';
 const Selector: FC<{onSelected: (v: number) => void; clearable: boolean}> = ({ onSelected, clearable }) => (
   <div className={cn.picker}>
     {new Array(9).fill(null).map((_, id) => (
-      <Button key={id} onClick={() => onSelected(id + 1)}>{id + 1}</Button>
+      <Button className={cn.selector} key={id} onClick={() => onSelected(id + 1)}>{id + 1}</Button>
     ))}
-   {clearable && <Button  icon={<ClearOutlined />} onClick={() => onSelected(0)} />}
+   {clearable && <Button className={cn.selector} icon={<ClearOutlined />} onClick={() => onSelected(0)} />}
   </div>
 )
 
@@ -39,6 +39,12 @@ const NumberWgt: FC<NumberWgtProps> = ({ val, col, row, onValueChanged, valSugge
   }, [col, row, onValueChanged, setPopupOpen]);
   const isEmpty = val === 0;
   const [showSuggested, setShowSuggested] = useState(false);
+  useEffect(() => {
+    if (showSuggested && showDefault) {
+      setShowSuggested(false);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showDefault]);
   const isVisible = showSuggested || showDefault;
   if (!isVisible && isEmpty) {
     return <Button className={classNames(cn.cell, cn.computed)} icon={<EyeOutlined />} onClick={() => setShowSuggested(true)} />;

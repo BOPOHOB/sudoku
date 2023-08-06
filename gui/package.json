@@ -9,7 +9,6 @@
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "antd": "^5.2.1",
-    "babel-plugin-named-exports-order": "^0.0.2",
     "classnames": "^2.3.2",
     "craco-less": "^2.1.0-alpha.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",

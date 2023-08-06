@@ -11,6 +11,9 @@
     grid-template-rows: repeat(3, 1fr);
     row-gap: 10px;
     column-gap: 10px;
+    width: 100vmin;
+    height: calc(100vmin - 50px);
+    max-height: 500px;
 
     >div {
       display: grid;
@@ -18,19 +21,18 @@
       grid-template-rows: repeat(3, 1fr);
       align-items: stretch;
       justify-content: stretch;
-    }
 
+      .cell {
+        font-weight: 600;
+        padding: 0px;
 
-
-    .cell {
-      font-weight: 600;
-      width: initial;
-      min-width: 41px;
-
-      &.computed {
-        background-color: rgba(0, 69, 165, 0.3);
+        &.computed {
+          background-color: rgba(0, 69, 165, 0.3);
+        }
       }
     }
+
+
   }
 
   .manager {
@@ -46,4 +48,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+}
+
+.picker .selector,
+.table .cell {
+  width: initial;
+  height: initial;
+  &:global(.ant-btn-icon-only) {
+    width: initial;
+    height: initial;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 25px;
+  }
 }
