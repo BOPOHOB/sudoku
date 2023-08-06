@@ -1,9 +1,10 @@
 {
-  "name": "cyber-monitoring",
-  "version": "0.1.0",
+  "name": "sudoku-solver-gui",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.2.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@craco/craco": "^7.0.0-alpha.3",
     "@types/less": "^3.0.3",
     "@types/react": "^18.2.14",
@@ -13,25 +14,17 @@
     "craco-less": "^2.1.0-alpha.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "less": "^4.1.3",
-    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "sudoku": "file:../solver",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4",
-    "webpack": "^5.75.0"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "deploy": "craco build && scp -r build bopohob@bopohob.ru:/var/www/sudoku"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "npx eslint --max-warnings=0",
-      "npx prettier --write"
-    ]
   },
   "browserslist": {
     "production": [
