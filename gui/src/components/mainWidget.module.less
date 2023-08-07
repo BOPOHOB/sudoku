@@ -12,8 +12,9 @@
     row-gap: 10px;
     column-gap: 10px;
     width: 100vmin;
-    height: calc(100vmin - 50px);
-    max-height: 500px;
+    height: 100vmin;
+    max-height: min(calc(100vh - 132px), 500px);
+    max-width: min(calc(100vh - 132px), 500px);
 
     >div {
       display: grid;
